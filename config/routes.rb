@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'board#index'
   get 'board/index'
 
-  get 'board/create'
+  post 'board/create'
 
   get 'board/edit'
 
