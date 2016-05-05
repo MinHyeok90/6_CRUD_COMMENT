@@ -14,4 +14,10 @@ class BoardController < ApplicationController
 
   def destroy
   end
+  
+  def comment_create
+    @comment = Comment.new(content: params[:content], post_id: params[:post_id])
+    @comment.save
+    redirect_to :back
+  end
 end
